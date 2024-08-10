@@ -1,12 +1,11 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const EnrollmentSchema = new mongoose.Schema({
-    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    courseId: { type: mongoose.Schema.Types.ObjectId, ref: 'Course', required: true },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    course: { type: mongoose.Schema.Types.ObjectId, ref: 'Course', required: true },
     status: { type: String, enum: ['active', 'completed', 'canceled'], default: 'active' },
-    progress: { type: Number, default: 0 },
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now }
+    progress: { type: Number, default: 0 }, // percentage of completion
+    enrolledAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Enrollment', EnrollmentSchema);
+export default mongoose.model('Enrollment', EnrollmentSchema);
