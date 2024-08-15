@@ -1,0 +1,57 @@
+/* Home.css */
+
+/* General Container */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+/* Heading */
+.home-heading {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Subheading */
+.home-subheading {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Button */
+.home-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home-heading {
+        font-size: 2rem;
+    }
+
+    .home-subheading {
+        font-size: 1.2rem;
+    }
+
+    .home-button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
